@@ -11,6 +11,7 @@
   --text-blue: #0044aa; 
   --blue-1: #000077;
   --blue-2: #0044aa;
+  --blue-3: #0044dd;
   --gray-1: #a0a0a0;
 }
 
@@ -117,4 +118,55 @@ body {
 
 .bios-table .value {
   color: var(--text-green);
+}
+
+.bios-footer {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  box-sizing: border-box;
+  background-color: var(--blue-1);
+  border-top: 2px solid var(--blue-2);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 6px 16px;
+  font-size: 24px;
+  user-select: none;
+  z-index: 100;
+}
+
+.bios-shortcuts {
+  display: flex;
+  gap: 24px;
+  color: var(--gray-1);
+}
+
+.key-highlight {
+  color: var(--text-white);
+}
+
+.bios-credits {
+  color: var(--text-white);
+  letter-spacing: 1px;
+}
+
+.bios-cursor {
+  display: inline-block;
+  color: var(--text-white);
+  animation: blink 1s step-start infinite;
+}
+
+@keyframes blink {
+  50% {
+    opacity: 0;
+  }
+}
+
+.bios-arrows {
+  display: inline-flex;
+  align-items: center;
+  line-height: 1;
+  transform: translateY(-2px);
 }

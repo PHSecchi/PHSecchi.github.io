@@ -52,3 +52,22 @@ document.addEventListener('DOMContentLoaded', () => {
   setInterval(updateBiosClock, 1000);
   setupNavigation();
 });
+
+
+// Barra inferior ========================================================
+document.addEventListener('keydown', (e) => {
+  const tabs = Array.from(document.querySelectorAll('.nav-tab'));
+  const currentIndex = tabs.findIndex(tab => tab.classList.contains('active'));
+
+  if (e.key === 'ArrowRight' || (e.key === 'Tab' && !e.shiftKey)) {
+    e.preventDefault();
+    const nextIndex = (currentIndex + 1) % tabs.length;
+    tabs[nextIndex].click();
+  } else if (e.key === 'ArrowLeft' || (e.key === 'Tab' && e.shiftKey)) {
+    e.preventDefault();
+    const prevIndex = (currentIndex - 1 + tabs.length) % tabs.length;
+    tabs[prevIndex].click();
+  } else if (e.key === 'Escape') {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  }
+});
