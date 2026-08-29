@@ -9,6 +9,9 @@
   --text-white: #e0e0e0;
   --text-green: #00ff66;
   --text-blue: #0044aa; 
+  --blue-1: #000077;
+  --blue-2: #0044aa;
+  --gray-1: #a0a0a0;
 }
 
 body {
@@ -16,10 +19,68 @@ body {
   font-family: 'Modern DOS 8x16', monospace;
   font-size: 24px;
   color: var(--text-white);
-  padding: 20px;
+  margin: 0px;
 }
 
-/* Moldura e Cabeçalho estilo BIOS */
+.bios-header {
+  width: 100%;
+  background-color: var(--bg-color);
+  user-select: none;
+  margin-bottom: 20px;
+}
+
+.bios-topline {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: var(--text-white);
+  padding: 8px 12px;
+  font-size: 24px;
+  letter-spacing: 1px;
+  background-color: var(--blue-1);
+}
+
+.bios-brand {
+  text-align: left;
+}
+
+.bios-title {
+  text-align: center;
+}
+
+.bios-datetime {
+  text-align: right;
+  min-width: 180px;
+}
+
+.bios-nav {
+  display: flex;
+  background-color: var(--blue-2);
+}
+
+.nav-tab {
+  background: transparent;
+  border: none;
+  color: var(--gray-1);
+  font-family: 'Modern DOS 8x16', monospace;
+  font-size: 24px;
+  padding: 4px 24px;
+  cursor: pointer;
+  letter-spacing: 1px;
+  outline: none;
+}
+
+.nav-tab:hover {
+  color: var(--text-white);
+}
+
+.nav-tab.active {
+  background-color: #a8a8a8;
+  color: #000000;
+  font-weight: bold;
+}
+
+
 .bios-box {
   border: 2px solid var(--text-blue);
   padding: 15px 25px;
@@ -34,7 +95,6 @@ body {
   font-size: 26px;
 }
 
-/* Alinhamento dos campos */
 .bios-table {
   width: 100%;
   border-collapse: collapse;
