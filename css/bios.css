@@ -1,0 +1,172 @@
+@font-face {
+  font-family: 'Modern DOS 8x16';
+  src: url('../fonts/ModernDOS8x16.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+:root {
+  --bg-color: #000000;
+  --text-white: #e0e0e0;
+  --text-green: #00ff66;
+  --text-blue: #0044aa; 
+  --blue-1: #000077;
+  --blue-2: #0044aa;
+  --blue-3: #0044dd;
+  --gray-1: #a0a0a0;
+}
+
+body {
+  background-color: var(--bg-color);
+  font-family: 'Modern DOS 8x16', monospace;
+  font-size: 24px;
+  color: var(--text-white);
+  margin: 0px;
+}
+
+.bios-header {
+  width: 100%;
+  background-color: var(--bg-color);
+  user-select: none;
+  margin-bottom: 20px;
+}
+
+.bios-topline {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: var(--text-white);
+  padding: 8px 12px;
+  font-size: 24px;
+  letter-spacing: 1px;
+  background-color: var(--blue-1);
+}
+
+.bios-brand {
+  text-align: left;
+}
+
+.bios-title {
+  text-align: center;
+}
+
+.bios-datetime {
+  text-align: right;
+  min-width: 180px;
+}
+
+.bios-nav {
+  display: flex;
+  background-color: var(--blue-2);
+}
+
+.nav-tab {
+  background: transparent;
+  border: none;
+  color: var(--gray-1);
+  font-family: 'Modern DOS 8x16', monospace;
+  font-size: 24px;
+  padding: 4px 24px;
+  cursor: pointer;
+  letter-spacing: 1px;
+  outline: none;
+}
+
+.nav-tab:hover {
+  color: var(--text-white);
+}
+
+.nav-tab.active {
+  background-color: #a8a8a8;
+  color: #000000;
+  font-weight: bold;
+}
+
+
+.bios-box {
+  border: 2px solid var(--text-blue);
+  padding: 15px 25px;
+  margin-bottom: 20px;
+  max-width: 650px;
+}
+
+.bios-legend {
+  color: var(--text-blue);
+  padding: 0 10px;
+  letter-spacing: 2px;
+  font-size: 26px;
+}
+
+.bios-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.bios-table td {
+  padding: 4px 0;
+}
+
+.bios-table .key {
+  color: var(--text-white);
+  width: 130px;
+}
+
+.bios-table .separator {
+  color: var(--text-white);
+  width: 40px;
+  text-align: center;
+}
+
+.bios-table .value {
+  color: var(--text-green);
+}
+
+.bios-footer {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  box-sizing: border-box;
+  background-color: var(--blue-1);
+  border-top: 2px solid var(--blue-2);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 6px 16px;
+  font-size: 24px;
+  user-select: none;
+  z-index: 100;
+}
+
+.bios-shortcuts {
+  display: flex;
+  gap: 24px;
+  color: var(--gray-1);
+}
+
+.key-highlight {
+  color: var(--text-white);
+}
+
+.bios-credits {
+  color: var(--text-white);
+  letter-spacing: 1px;
+}
+
+.bios-cursor {
+  display: inline-block;
+  color: var(--text-white);
+  animation: blink 1s step-start infinite;
+}
+
+@keyframes blink {
+  50% {
+    opacity: 0;
+  }
+}
+
+.bios-arrows {
+  display: inline-flex;
+  align-items: center;
+  line-height: 1;
+  transform: translateY(-2px);
+}

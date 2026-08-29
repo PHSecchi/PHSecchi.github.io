@@ -1,14 +1,43 @@
 <!DOCTYPE html>
-<html>
+<html lang="pt-BR">
 <head>
-    <title>PH Secchi BIOS</title>
+  <meta charset="UTF-8">
+  <link rel="icon" href="data:,">
+  <title>BIOS Setup Utility</title>
+  <link rel="stylesheet" href="css/bios.css">
 </head>
-
 <body>
-
-    <h1>PHSECCHI BIOS</h1>
-
-    <p>System online.</p>
-
+    <header class="bios-header">
+    <div class="bios-topline">
+      <span class="bios-brand">PHSECCHI BIOS v0.1.A</span>
+      <span class="bios-title">PERSONAL BIOS SETUP UTILITY</span>
+      <span class="bios-datetime" id="bios-clock">00/00/0000 00:00:00</span>
+    </div>
+    <nav class="bios-nav">
+      <button class="nav-tab active" data-target="main">MAIN</button>
+      <button class="nav-tab" data-target="career">CAREER</button>
+      <button class="nav-tab" data-target="media">MEDIA</button>
+      <button class="nav-tab" data-target="links">LINKS</button>
+      <button class="nav-tab" data-target="contact">CONTACT</button>
+    </nav>
+    </header>
+  <div id="system-info-container">
+  </div>
+  <script src="js/main.js"></script>
 </body>
+
+<footer class="bios-footer">
+  <div class="bios-shortcuts">
+    <span><span class="key-highlight">F1</span>: HELP</span>
+    <span><span class="key-highlight bios-arrows">&#x2191;&#x2193;&#x2190;&#x2192;</span>: SELECT ITEM  </span>
+    <span><span class="key-highlight">ENTER</span>: SUB-MENU</span>
+    <span><span class="key-highlight">TAB</span>: SWITCH TAB</span>
+    <span><span class="key-highlight">ESC</span>: TOP</span>
+  </div>
+  <div class="bios-credits">
+    BUILD WITH &lt;3 AND COFFEE<span class="bios-cursor">_</span>
+  </div>
+</footer>
+
 </html>
+
