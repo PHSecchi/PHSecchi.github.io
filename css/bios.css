@@ -1,6 +1,8 @@
+/* ==================== GLOBAL ==================== */
+
 @font-face {
   font-family: 'Modern DOS 8x16';
-  src: url('../fonts/ModernDOS8x16.ttf') format('truetype');
+  src: url('../assets/fonts/ModernDOS8x16.ttf') format('truetype');
   font-weight: normal;
   font-style: normal;
 }
@@ -22,6 +24,8 @@ body {
   color: var(--text-white);
   margin: 0px;
 }
+
+/* ==================== HEADER ==================== */
 
 .bios-header {
   width: 100%;
@@ -119,6 +123,8 @@ body {
 .bios-table .value {
   color: var(--text-green);
 }
+
+/* ==================== FOOTER ==================== */
 
 .bios-footer {
   position: fixed;

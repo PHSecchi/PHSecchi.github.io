@@ -11,7 +11,7 @@ async function loadSection(url, elementId) {
 }
 
 document.addEventListener('DOMContentLoaded', () => {
-  loadSection('html/system-info.html', 'system-info-container');
+  loadSection('sections/system-info.html', 'system-info-container');
 });
 
 
