@@ -85,12 +85,32 @@ body {
   font-weight: bold;
 }
 
+/* ==================== COLUMNS ==================== */
+
+.bios-main-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.bios-col {
+  padding: 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+/* ==================== SECTIONS ==================== */
 
 .bios-box {
-  border: 2px solid var(--text-blue);
   padding: 15px 25px;
-  margin-bottom: 20px;
+  /* margin-bottom: 20px; */
   max-width: 650px;
+}
+
+.bios-box-border{
+  border: 2px solid var(--text-blue);
 }
 
 .bios-legend {
@@ -123,6 +143,7 @@ body {
 .bios-table .value {
   color: var(--text-green);
 }
+
 
 /* ==================== FOOTER ==================== */
 

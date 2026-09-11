@@ -6,23 +6,31 @@
   <title>PHSECCHI BIOS</title>
   <link rel="stylesheet" href="css/bios.css">
 </head>
-<body>
-    <header class="bios-header">
-    <div class="bios-topline">
-      <span class="bios-brand">PHSECCHI BIOS v0.1.A</span>
-      <span class="bios-title">PERSONAL BIOS SETUP UTILITY</span>
-      <span class="bios-datetime" id="bios-clock">00/00/0000 00:00:00</span>
-    </div>
-    <nav class="bios-nav">
-      <button class="nav-tab active" data-target="main">MAIN</button>
-      <button class="nav-tab" data-target="career">CAREER</button>
-      <button class="nav-tab" data-target="media">MEDIA</button>
-      <button class="nav-tab" data-target="links">LINKS</button>
-      <button class="nav-tab" data-target="contact">CONTACT</button>
-    </nav>
-    </header>
-  <div id="system-info-container">
+
+<header class="bios-header">
+  <div class="bios-topline">
+    <span class="bios-brand">PHSECCHI BIOS v0.1.A</span>
+    <span class="bios-title">PERSONAL BIOS SETUP UTILITY</span>
+    <span class="bios-datetime" id="bios-clock">00/00/0000 00:00:00</span>
   </div>
+  <nav class="bios-nav">
+    <button class="nav-tab active" data-target="main">MAIN</button>
+    <button class="nav-tab" data-target="career">CAREER</button>
+    <button class="nav-tab" data-target="media">MEDIA</button>
+    <button class="nav-tab" data-target="links">LINKS</button>
+    <button class="nav-tab" data-target="contact">CONTACT</button>
+  </nav>
+</header>
+
+<body>
+  <main class="bios-main-grid">
+    <div class="bios-col">
+      <section id="system-info-container"></section>
+      <section id="about-me-container"></section>
+    </div>
+    <div class="bios-col">
+    </div>
+  </main>
   <script src="js/main.js"></script>
 </body>
 
