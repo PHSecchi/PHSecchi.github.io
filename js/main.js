@@ -13,6 +13,7 @@ async function loadSection(url, elementId) {
 document.addEventListener('DOMContentLoaded', () => {
   loadSection('sections/system-info.html', 'system-info-container');
   loadSection('sections/about-me.html', 'about-me-container');
+  loadSection('sections/IO-ports.html', 'IO-ports-container');
 });
 
 
@@ -70,5 +71,30 @@ document.addEventListener('keydown', (e) => {
     tabs[prevIndex].click();
   } else if (e.key === 'Escape') {
     window.scrollTo({ top: 0, behavior: 'smooth' });
+  }
+});
+
+// Cópia do link do email ===============================================
+document.addEventListener('click', (event) => {
+  const btn = event.target.closest('.copy-btn');
+  if (!btn) return;
+
+  const email = btn.dataset.email;
+  const label = btn.querySelector('.port-label');
+
+  if (email && label) {
+    navigator.clipboard.writeText(email).then(() => {
+      const originalText = label.textContent;
+      
+      label.textContent = '[COPIED TO CLIPBOARD]';
+      label.classList.add('copied');
+
+      setTimeout(() => {
+        label.textContent = originalText;
+        label.classList.remove('copied');
+      }, 2000);
+    }).catch(err => {
+      console.error('Erro ao copiar e-mail:', err);
+    });
   }
 });

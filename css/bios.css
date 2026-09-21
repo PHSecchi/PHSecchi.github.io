@@ -144,6 +144,104 @@ body {
   color: var(--text-green);
 }
 
+/* ==================== I/O PORTS ==================== */
+
+.bios-ports-list {
+  list-style: none;
+  padding: 0;
+  margin: 6px 0 0 0;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.port-item {
+  display: block;
+}
+
+.port-link {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  text-decoration: none;
+  color: var(--text-white, #ffffff);
+  font-family: inherit;
+  /* font-size: 15px; */
+  padding: 2px 4px;
+  cursor: pointer;
+  user-select: none;
+}
+
+.port-link:hover {
+  background-color: #ffffff;
+  color: #0000aa;
+}
+
+.port-icon {
+  color: #00ff66;
+}
+
+.port-link:hover .port-icon {
+  color: #0000aa;
+}
+
+.port-num {
+  color: var(--gray-1);
+  min-width: 145px;
+}
+
+.port-link:hover .port-num {
+  color: #0000aa;
+}
+
+.port-arrow {
+  color: var(--text-white, #ffffff);
+}
+
+.port-link:hover .port-arrow {
+  color: #0000aa;
+}
+
+/* .port-label {
+  font-weight: bold;
+} */
+
+.port-item.disabled .port-link {
+  color: #666688;
+  cursor: not-allowed;
+}
+
+.port-item.disabled .port-icon {
+  color: #aa3333;
+}
+
+.port-item.disabled .port-num {
+  color: #666688;
+}
+
+.port-item.disabled .port-link:hover {
+  background-color: transparent;
+  color: #666688;
+}
+
+button.port-link {
+  background: none;
+  border: none;
+  padding: 2px 4px;
+  margin: 0;
+  width: 100%;
+  text-align: left;
+  font: inherit;
+  color: inherit;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.port-label.copied {
+  color: #08e0e0; 
+}
 
 /* ==================== FOOTER ==================== */
 
