@@ -20,7 +20,7 @@
 body {
   background-color: var(--bg-color);
   font-family: 'Modern DOS 8x16', monospace;
-  font-size: 24px;
+  font-size: 22px;
   color: var(--text-white);
   margin: 0px;
 }
@@ -117,7 +117,7 @@ body {
   color: var(--text-blue);
   padding: 0 10px;
   letter-spacing: 2px;
-  font-size: 26px;
+  font-size: 22px;
 }
 
 .bios-table {
@@ -282,7 +282,7 @@ button.port-link {
   font-size: 20px;
 }
 
-/* Efeito de hover simulando cursor de BIOS */
+
 .stack-item:hover {
   background-color: #ffffff;
   color: #0000aa;
@@ -293,13 +293,129 @@ button.port-link {
 }
 
 .stack-status {
-  color: #00ff66; /* Verde terminal */
+  color: #00ff66; 
   font-weight: bold;
   letter-spacing: 0.5px;
 }
 
 .stack-item:hover .stack-status {
-  color: #0000aa; /* Inverte no hover */
+  color: #0000aa; 
+}
+
+/* ==================== FEATURED PROJECTS ==================== */
+
+.projects-container {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-top: 4px;
+}
+
+.projects-meta-status {
+  color: var(--bios-cyan, #55ffff);
+  font-size: 20px;
+  margin: 0 0 4px 0;
+  letter-spacing: 0.5px;
+}
+
+.projects-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.project-item {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  padding: 6px 8px;
+  background-color: rgba(0, 0, 0, 0.2);
+  border-left: 2px solid var(--bios-border, #5555ff);
+}
+
+.project-item:hover {
+  background-color: rgba(255, 255, 255, 0.08);
+}
+
+.project-header {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+
+.project-tag {
+  color: var(--bios-cyan, #55ffff);
+  font-size: 16px;
+}
+
+.project-title {
+  color: #ffffff;
+  font-weight: bold;
+  font-size: 18px;
+  letter-spacing: 0.5px;
+}
+
+.project-state {
+  margin-left: auto;
+  font-size: 14px;
+  font-weight: bold;
+  padding: 1px 4px;
+}
+
+.project-state.wip {
+  color: #ffff55; 
+}
+
+.project-state.building {
+  color: #ffaa00; 
+}
+
+.project-state.dev {
+  color: #00ff66; 
+}
+
+.project-state.released {
+  color: #00ff66; 
+}
+
+.project-desc {
+  margin: 0;
+  font-size: 16px;
+  line-height: 1.4;
+  color: #d0d0ff; 
+}
+
+.project-links {
+  margin-top: 2px;
+}
+
+.project-action-link {
+  color: #ffffff;
+  text-decoration: none;
+  font-size: 16px;
+  font-weight: bold;
+  cursor: pointer;
+  display: inline-block;
+  padding: 1px 4px;
+}
+
+.project-action-link:hover {
+  background-color: #ffffff;
+  color: #0000aa;
+}
+
+.project-action-link.disabled {
+  color: #7777aa;
+  cursor: not-allowed;
+}
+
+.project-action-link.disabled:hover {
+  background-color: transparent;
+  color: #7777aa;
 }
 
 /* ==================== FOOTER ==================== */
