@@ -243,6 +243,65 @@ button.port-link {
   color: #08e0e0; 
 }
 
+/* ==================== PRIMARY STACK ==================== */
+
+.stack-container {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  margin-top: 4px;
+}
+
+.stack-group {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.stack-header {
+  color: var(--bios-cyan, #55ffff);
+  font-weight: bold;
+  font-size: 20px;
+}
+
+.stack-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.stack-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1px 4px;
+  font-family: inherit;
+  font-size: 20px;
+}
+
+/* Efeito de hover simulando cursor de BIOS */
+.stack-item:hover {
+  background-color: #ffffff;
+  color: #0000aa;
+}
+
+.stack-name {
+  color: inherit;
+}
+
+.stack-status {
+  color: #00ff66; /* Verde terminal */
+  font-weight: bold;
+  letter-spacing: 0.5px;
+}
+
+.stack-item:hover .stack-status {
+  color: #0000aa; /* Inverte no hover */
+}
+
 /* ==================== FOOTER ==================== */
 
 .bios-footer {

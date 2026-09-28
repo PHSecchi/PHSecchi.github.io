@@ -14,6 +14,7 @@ document.addEventListener('DOMContentLoaded', () => {
   loadSection('sections/system-info.html', 'system-info-container');
   loadSection('sections/about-me.html', 'about-me-container');
   loadSection('sections/IO-ports.html', 'IO-ports-container');
+  loadSection('sections/primary-stack.html', 'primary-stack-container');
 });
 
 
